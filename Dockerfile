@@ -1,9 +1,9 @@
 FROM php:8.3-apache
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git unzip libzip-dev libpng-dev libjpeg-dev libwebp-dev libfreetype6-dev \
+    && apt-get install -y --no-install-recommends git unzip libzip-dev libpng-dev libjpeg-dev libwebp-dev libfreetype6-dev libpq-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
-    && docker-php-ext-install pdo_mysql zip gd bcmath \
+    && docker-php-ext-install pdo_mysql pdo_pgsql zip gd bcmath \
     && a2enmod rewrite headers \
     && rm -rf /var/lib/apt/lists/*
 
