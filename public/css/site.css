@@ -1,0 +1,277 @@
+:root {
+    --ink: #111827;
+    --muted: #64748b;
+    --line: #e5e7eb;
+    --soft: #f6f8fb;
+    --success: #12b886;
+    --blue: #2563eb;
+    --amber: #f59e0b;
+}
+
+body {
+    color: var(--ink);
+    background: var(--soft);
+    letter-spacing: 0;
+}
+
+a {
+    color: var(--blue);
+}
+
+.site-shell {
+    min-height: 100vh;
+}
+
+.brand-mark {
+    display: inline-grid;
+    width: 2.1rem;
+    height: 2.1rem;
+    place-items: center;
+    border-radius: 8px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--ink), var(--success));
+    font-size: .82rem;
+    letter-spacing: 0;
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 2;
+}
+
+.icon-lg {
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+.eyebrow {
+    color: var(--success);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.blog-hero {
+    background:
+        linear-gradient(135deg, rgba(18, 184, 134, .10), rgba(37, 99, 235, .08)),
+        #fff;
+    border-bottom: 1px solid var(--line);
+}
+
+.stats-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+}
+
+.stats-strip > div,
+.filter-panel,
+.auth-card,
+.form-surface,
+.table-surface,
+.metric-card,
+.empty-state {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.stats-strip > div {
+    padding: 1.25rem;
+}
+
+.stats-strip strong {
+    display: block;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.stats-strip span {
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.filter-panel,
+.auth-card,
+.form-surface,
+.table-surface {
+    padding: 1.25rem;
+}
+
+.blog-card {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.blog-card .card-img-top {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.blog-card .card-title {
+    line-height: 1.3;
+}
+
+.detail-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: #fff;
+}
+
+.article-content {
+    color: #243041;
+    font-size: 1.06rem;
+    line-height: 1.8;
+    white-space: normal;
+}
+
+.bg-soft {
+    background: var(--soft);
+}
+
+.empty-state {
+    padding-inline: 1rem;
+}
+
+.empty-state-icon {
+    display: grid;
+    width: 4rem;
+    height: 4rem;
+    place-items: center;
+    color: var(--success);
+    border-radius: 8px;
+    background: rgba(18, 184, 134, .12);
+}
+
+.page-link {
+    color: var(--ink);
+    border-color: var(--line);
+}
+
+.active > .page-link,
+.page-link.active {
+    color: #fff;
+    background-color: var(--ink);
+    border-color: var(--ink);
+}
+
+.auth-screen {
+    min-height: calc(100vh - 170px);
+    display: flex;
+    align-items: center;
+}
+
+.admin-shell {
+    background: var(--soft);
+}
+
+.admin-sidebar {
+    background: #fff;
+}
+
+.admin-sidebar .nav-link {
+    color: #334155;
+    border-radius: 8px;
+}
+
+.admin-sidebar .nav-link.active {
+    color: #fff;
+    background: var(--ink);
+}
+
+.admin-main {
+    min-height: calc(100vh - 58px);
+}
+
+.metric-card {
+    position: relative;
+    min-height: 132px;
+    padding: 1.25rem;
+    overflow: hidden;
+}
+
+.metric-card span {
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.metric-card strong {
+    display: block;
+    margin-top: .5rem;
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.metric-icon {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    color: var(--success);
+    opacity: .18;
+}
+
+.admin-thumb {
+    width: 72px;
+    height: 48px;
+    flex: 0 0 72px;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.image-preview {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.btn-group form {
+    display: inline-flex;
+}
+
+.btn-group form .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+@media (min-width: 992px) {
+    .admin-sidebar {
+        min-height: calc(100vh - 58px);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .display-5 {
+        font-size: 2.2rem;
+    }
+
+    .stats-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-panel,
+    .auth-card,
+    .form-surface,
+    .table-surface {
+        padding: 1rem;
+    }
+
+    .admin-sidebar .nav {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .admin-sidebar .nav-link {
+        white-space: nowrap;
+    }
+}
